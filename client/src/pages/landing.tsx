@@ -55,17 +55,26 @@ const Navbar = () => {
                 <IoMenuOutline onClick={handleShowNav} className={styles.hamburger} size='1.5em'/>
                 </div>
                 {menuOpen && (<div className={styles.megaMenu}>
-                    <div className={styles.megaMenuSection}>
+                    <div>
                         <h3>Social Media made easy</h3>
                         <p>Manage your social media accounts in one place</p>
                         <div className={styles.megaMenubtn}>
                             <Link href='#'>Publish & Schedule</Link>
                             <p>Plan your posts and get constant communication</p>
                         </div>
+                        <div className={styles.megaMenubtn}>
                             <Link href='#'>Monitor activity</Link>
-                            <Link href='#'>Get Analytics</Link>
-                            <Link href='#'>Engage customers</Link>
+                            <p>Track activity on your Social Media</p>
                         </div>
+                        <div className={styles.megaMenubtn}>
+                            <Link href='#'>Get Analytics</Link>
+                            <p>Get insights on your audience</p>
+                        </div>
+                        <div className={styles.megaMenubtn}>
+                            <Link href='#'>Engage customers</Link>
+                            <p>Communicate with your audience</p>
+                         </div>
+                    </div>
                     <div>
                     <Link href='#'>How to get better Analytics</Link>
                     <Link href='#'>Engage your audience with good communication</Link>

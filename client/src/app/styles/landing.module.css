@@ -17,7 +17,7 @@
 
 .navbar a {
     text-decoration: none;
-    padding: 0 1rem;
+    padding: 0;
     display: block;
 }
 
@@ -123,6 +123,7 @@
     border: solid 1px var(--black);
 }
 
+
 .megaMenu h3 {
     color: var(--blue);
     font-size: 16px;
@@ -136,7 +137,15 @@
 }
 
 .megaMenubtn {
-    text-align: left;
+    background-color: var(--bg);
+    border: none;
+    padding: 12px;
+    font-weight: 600;
+    margin: 6px;
+    border-radius: 8px;
+}
+.megaMenubtn:hover {
+    background-color: var(--pinkLight);
 }
 
 @media screen and (max-width: 900px) 

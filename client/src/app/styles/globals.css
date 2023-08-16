@@ -8,8 +8,10 @@
     --bgHover:  #fff6ed;
     --bg-accent: #eb5555;
     --black: #0d0d0d;
+    --blueDark: #49cbff;
     --blue: #8fdfff;
     --green: #C4F7A1;
+    --pinkLight: #ffdaeb;
     --pink: #ffb3d5;
 
     background-color: var(--bg);
