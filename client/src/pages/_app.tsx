@@ -3,7 +3,6 @@ import store from '../app/store/store'
 import { createWrapper } from 'next-redux-wrapper';
 import '../app/styles/globals.css'
 
-
 function App({ Component, pageProps } :any) {
   return (
        <Component {...pageProps} />

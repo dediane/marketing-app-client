@@ -4,12 +4,14 @@
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
 
-    --bg:  #fffbf7;
+    --bg:  #fdfbfa;
     --bgHover:  #fff6ed;
     --bg-accent: #eb5555;
     --black: #0d0d0d;
+    --grey: #555555;
     --blueDark: #49cbff;
-    --blue: #8fdfff;
+    --violet: #cfceff;
+    --blue: #b5eaff;
     --green: #C4F7A1;
     --pinkLight: #ffdaeb;
     --pink: #ffb3d5;
