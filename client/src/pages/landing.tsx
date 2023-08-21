@@ -1,146 +1,36 @@
 import {Provider} from 'react-redux'
 import styles from '../app/styles/landing.module.css'
+import button from '../app/styles/buttons.module.css'
 import React, {useContext, useEffect, useRef, useState} from "react";
 import Image from 'next/image';
 import Link from 'next/link';
-import {IoMenuOutline, IoLogoInstagram, IoLogoFacebook, IoLogoTiktok} from 'react-icons/io5';
+import {IoMenuOutline, IoLogoInstagram, IoLogoFacebook, IoLogoTiktok, IoLogoPinterest, IoLogoTwitter} from 'react-icons/io5';
 import useWindowSize from '@/app/hooks/windowSize';
-import { useRouter } from 'next/router'
+import { Router, useRouter } from 'next/router'
 import landingIllustration from '../../public/assets/landing.png';
 import localFont from 'next/font/local'
+import Footer from '@/app/components/footer';
+import Navbar from '@/app/components/navbar';
 
-const Baldur = localFont({ src: '../../public/fonts/Baldur.ttf' })
-const Titania = localFont({ src: '../../public/fonts/Titania-Regular.ttf' })
+const Belgiano = localFont({ src: '../../public/fonts/Belgiano.ttf'})
 
-
-const Navbar = () => {
-    const [showNav, setShowNav] = useState(false);
-    const [openMenu, setOpenMenu] = useState(null);
-    const menu1Ref = useRef(null);
-    const menu2Ref = useRef(null);
-    const router = useRouter();
-    const handleShowNav = () => {
-        setShowNav(!showNav);
-    }
-    const isMobile = useWindowSize().width < 900;
-
-    const handleMouseEnter = (menuName :any) => {
-        setOpenMenu(menuName);
-    };
-    
-    const handleMouseLeave = (e :any, ref :any) => {
-        if (!ref.current.contains(e.relatedTarget)) {
-            setOpenMenu(null);
-        }
-    };
-
-  return (
-    <>
-        <nav className={styles.navbar}>
-            <div className={styles.navContent}>
-
-                <div className={styles.logo}>
-                    {/* <Image src="/logo.png" alt="logo" width={100} height={100} /> */}
-                </div>
-                {(showNav || !isMobile) && (
-                <>
-                <div className={styles.linksWrapper}>
-                    <ul>
-                    <li onMouseEnter={() => handleMouseEnter('menu1')} 
-                    ref={menu1Ref}>
-                    <a className={styles.navLink} href="#">Solutions</a>
-                    </li>
-                    <li 
-                    onMouseEnter={() => handleMouseEnter('menu2')} 
-                    ref={menu2Ref}>
-                    <a className={styles.navLink} href="#">Resources</a>
-                    </li>
-                        <li><Link className={styles.navLink} href="/pricing">Pricing</Link></li>
-                        <li><Link className={styles.navLink} href="/">Blog</Link></li>
-                    </ul>
-                </div> 
-                <div className={styles.buttonsWrapper}>
-                        <button className={styles.button}>Log in</button>
-                        <button className={styles.button_accent}>Start your free trial!</button>
-                </div>
-                </>
-                )}
-                <IoMenuOutline onClick={handleShowNav} className={styles.hamburger} size='1.5em'/>
-                </div>
-                {openMenu === 'menu1' && (<div className={styles.megaMenu} onMouseLeave={(e) => handleMouseLeave(e, menu1Ref)}>
-                    <div style={{padding:'40px'}}>
-                        <h3 style={{borderLeft: 'solid 12px #ff78b5'}}>Social Media made easy</h3>
-                        <p style={{marginBottom: '20px', marginTop: '10px', paddingLeft:'12px'}}>Manage your social media accounts in one place</p>
-                        <hr style={{marginBottom: '20px'}}/>
-                        <div className={styles.megaMenubtn} onClick={() => router.push('/publish-schedule')}>
-                            <h4 className={styles.subtitle}>Publish & Schedule</h4>
-                            <p>Plan your posts and get constant communication</p>
-                        </div>
-                        <div className={styles.megaMenubtn} onClick={() => router.push('/monitor-activities')}>
-                            <h4 className={styles.subtitle}>Monitor activity</h4>
-                            <p>Track activity on your Social Media</p>
-                        </div>
-                        <div className={styles.megaMenubtn} onClick={() => router.push('/get-analytics')}>
-                            <h4 className={styles.subtitle}>Get Analytics</h4>
-                            <p>Get insights on your audience</p>
-                        </div>
-                        <div className={styles.megaMenubtn} onClick={() => router.push('/engage-customers')}>
-                            <h4 className={styles.subtitle}>Engage customers</h4>
-                            <p>Communicate with your audience</p>
-                         </div>
-                    </div>
-                    <div style={{padding:'40px'}}>
-                        <h3 style={{borderLeft: 'solid 12px #49cbff'}}>Lite hub for your socials</h3>
-                        <p style={{marginBottom: '20px', marginTop: '10px', paddingLeft:'12px'}}>Hassle-free social media management</p>
-                        <hr style={{marginBottom: '20px'}}/>
-                        <div className={styles.megaMenubtn2} onClick={() => router.push('/publish-schedule')}>
-                            <h4 className={styles.subtitle}>One inbox for all your social medias</h4>
-                            <p>Don't miss any message, get them all in one place</p>
-                        </div>
-                        <div className={styles.megaMenubtn2} onClick={() => router.push('/monitor-activities')}>
-                            <h4 className={styles.subtitle}>AI powered assistant</h4>
-                            <p>Use our AI assistant to generate Comments and Captions</p>
-                        </div>
-                        <div className={styles.megaMenubtn2} onClick={() => router.push('/get-analytics')}>
-                            <h4 className={styles.subtitle}>PDF exportable</h4>
-                            <p>Discuss about your marketing strategy with our PDF analytics overview</p>
-                        </div>
-                        <div className={styles.megaMenubtn2} onClick={() => router.push('/engage-customers')}>
-                            <h4 className={styles.subtitle}>Convert your followers to customers</h4>
-                            <p>Grow your community and convert them with a good communication</p>
-                         </div>
-                    </div>
-                    <div>
-                    <Link href='#'>How to get better Analytics</Link>
-                    <Link href='#'>Engage your audience with good communication</Link>
-                    </div>
-                    <div>
-                        
-                    </div>
-                </div>)}
-                {openMenu === 'menu2' && (<div className={styles.megaMenu} onMouseLeave={(e) => handleMouseLeave(e, menu2Ref)}>
-                    <Link href='#'>How to get better Analytics</Link>
-                    <Link href='#'>Engage your audience with good communication</Link>
-                </div>)}
-        </nav>
-    </>
-  );
-};
 
 export const Hero = () => {
     return (
-        <div style={{height: 'calc(100vh - 66px)',display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
-            <div style={{ flex: 1 }}>
-                <h1 className={Baldur.className} style={{fontSize: 110, paddingBottom: '40px'}}>Social Media made easy</h1>
-                <p style={{fontSize: 24, marginBottom: '40px'}}>Manage your social media accounts in one place — all in one app.
-                Get Started now!</p>
-                <div>
-                    <button className={styles.button_big_accent}>Start your free trial!</button>
-                    <button className={styles.button_big}>Learn more</button>
+        <div style={{maxWidth: 1200, margin: 'auto'}}>
+            <div style={{height: 'calc(100vh - 66px)',display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
+                <div style={{ flex: 1 , marginLeft: 120}}>
+                    <h1 className={Belgiano.className} style={{fontSize: 90, paddingBottom: '40px'}}>Social Media <br></br>made easy</h1>
+                    <p style={{fontSize: 21, marginBottom: '10px'}}>Manage your social media accounts in one place</p>
+                    <p style={{fontSize: 21, marginBottom: '40px'}}>All in one APP - Get started now!</p>
+                    <div>
+                        <button className={button.button_big_accent}>Start your free trial!</button>
+                        <button className={button.button_big}>Learn more</button>
+                    </div>
                 </div>
-            </div>
-            <div style={{ flex: 1 }} className={styles.imageContainer}>
-                <Image src={landingIllustration} alt="illustration social network hub" style={{width: 'auto', height: '100%',}}/>
+                <div style={{ flex: 1, marginRight: 120 }} className={styles.imageContainer}>
+                    <Image src={landingIllustration} alt="illustration social network hub" style={{width: 'auto', height: '100%',}}/>
+                </div>
             </div>
         </div>
     );
@@ -154,14 +44,225 @@ export const Background = () => {
     );
 }
 
+export const Logos = () => {
+    const logos = [<IoLogoInstagram/>, <IoLogoFacebook/>, <IoLogoTiktok/>, <IoLogoTwitter/>, <IoLogoPinterest/>]
+    return (
+        <div className={styles.logoDiv} >
+            <div className={styles.carousel}>
+                <div className={styles.carouselInner}>
+                    {logos.map((item, idx) => (
+                    <div key={idx} className={styles.carouselItem}>
+                        {item}
+                    </div>))}
+                    {logos.map((item, idx) => (
+                    <div key={idx} className={styles.carouselItem}>
+                        {item}
+                    </div>))}
+                    {logos.map((item, idx) => (
+                    <div key={idx} className={styles.carouselItem}>
+                        {item}
+                    </div>))}
+                    {logos.map((item, idx) => (
+                    <div key={idx} className={styles.carouselItem}>
+                        {item}
+                    </div>))}
+                </div>
+            </div>
+        </div>
+    )
+}
+
+const StartFreeTrial = () => {
+    const router = useRouter();
+    const items = ['Start your free trial', 'Start your free trial', 'Start your free trial', 'Start your free trial', 'Start your free trial', 'Start your free trial', 'Start your free trial']
+    return (
+        <div className={styles.logoDiv2} onClick={() => router.push('/login')}>
+            <div className={styles.carousel}>
+                <div className={styles.carouselInner2}>
+                    {items.map((item, idx) => (
+                    <div key={idx} className={styles.carouselItem2}>
+                    {item}
+                    </div>))}
+                    {items.map((item, idx) => (
+                    <div key={idx} className={styles.carouselItem2}>
+                    {item}
+                    </div>))}
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export const AllInOne = () => {
+    return (
+        <div style={{maxWidth: 1200, margin: 'auto'}}>
+        <div style={{marginLeft: 120, marginRight: 120, marginTop: 80}}>
+            <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
+                <div style={{flex: 1}}>
+
+                </div>
+                <div style={{flex: 1}}>
+                <h2 className={Belgiano.className} style={{fontSize: 64, marginBottom: '40px'}}>Centralize your <br/>social media management</h2>
+                <div style={{marginBottom: '60px'}}>
+                <p style={{fontSize: 18, marginBottom: '10px'}} >All your accounts. One view. No hassle.</p>
+                <p style={{fontSize: 18, marginBottom: '10px'}}> We brings all your social media feeds into one convenient dashboard.</p>
+                </div>
+                <div>
+                    <button className={button.button_accent_blue}>Discover our dashboard!</button>
+                    <button className={button.button}>Learn more</button>
+                </div>
+                </div>
+
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export const PlanSchedule = () => {
+    return (
+        <div style={{maxWidth: 1200, margin: 'auto'}}>
+        <div style={{marginLeft: 120, marginRight: 120, marginTop: 80, marginBottom: 80, maxWidth: '1200px'}}>
+            <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
+                <div style={{flex: 1}}>
+                <h2 className={Belgiano.className} style={{fontSize: 64, marginBottom: '40px'}}>Plan and Schedule. <br/>Never forget.</h2>
+                <div style={{marginBottom: '60px'}}>
+                <p style={{fontSize: 18, marginBottom: '10px'}} >All your accounts. One view. No hassle.</p>
+                <p style={{fontSize: 18, marginBottom: '10px'}}> We brings all your social media feeds into one convenient dashboard.</p>
+                </div>
+                <div>
+                    <button className={button.button_accent}>Start planning your first Post!</button>
+                    <button className={button.button}>Learn more</button>
+                </div>
+                <div style={{flex: 1}}>
+
+                </div>
+                </div>
+
+            </div>
+        </div>
+        </div>
+    )
+}
+
+export const Analytics = () => {
+    return (
+        <div style={{maxWidth: 1200, margin: 'auto'}}>
+            <div style={{marginLeft: 120, marginRight: 120, marginTop: 80, marginBottom: 80}}>
+                <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
+                    <div style={{flex: 1}}>
+
+                    </div>
+                    <div style={{flex: 1}}>
+                    <h2 className={Belgiano.className} style={{fontSize: 64, marginBottom: '40px'}}>In-depth Analytics</h2>
+                    <div style={{marginBottom: '60px'}}>
+                    <p style={{fontSize: 18, marginBottom: '10px'}} >Understand your audience with comprehensive insights and metrics.</p>
+                    <p style={{fontSize: 18, marginBottom: '10px'}} >Monitor the performances of your publication.</p>
+                    </div>
+                    <div>
+                        <button className={button.button_accent_pink}>Get exclusive insight!</button>
+                        <button className={button.button}>Learn more</button>
+                    </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    )
+}
+
+const WeareDesigned = () => {
+    return (
+        <div style={{maxWidth: 1200, margin: 'auto'}}>
+        <div style={{marginLeft: 120, marginTop: 50, marginBottom: 50, marginRight: 120, maxWidth: '1200px'}}>
+            <h2 className={Belgiano.className} style={{fontSize: 64, marginBottom: '40px'}}>We are designed for</h2>
+            <div style={{display: 'flex', flexDirection: 'row'}}>
+                <div style={{padding: 30, marginLeft: 10, marginRight: 10}}>
+                    <h2 style={{fontWeight: 200, fontSize: 32, marginBottom: 40}}>Business Owners Seeking Online Growth</h2>
+                    {/* <p style={{marginBottom: 20}}><b>✓ Optimize Social Media Presence:</b><br/> Elevate your brand's visibility across all leading platforms with our integrated tool.<br/></p>
+                    <p style={{marginBottom: 20}}><b>✓ Data-Driven Growth:</b><br/> Harness actionable insights to understand your audience, boosting organic business growth online.<br/></p>
+                    <p style={{marginBottom: 20}}><b>✓ Automated Content Scheduling:</b><br/> Plan weeks ahead, allowing more time for core business strategies.</p> */}
+                    <div style={{alignItems: 'center', justifyContent: 'center', display: 'flex', margin: 20}}>
+                    <button className={button.button_accent_blue}>Explore now</button>
+                    </div>
+                </div>
+                <div style={{padding: 30, marginLeft: 10, marginRight: 10}}>
+                    <h2 style={{fontWeight: 200, fontSize: 32, marginBottom: 40}}> Freelancers Enhancing Digital Profiles</h2>
+                    {/* <p style={{marginBottom: 10}}><b>✓ Unified Social Media Dashboard:</b><br/></p>
+                    <p style={{marginBottom: 20}}>Effortlessly manage diverse accounts, catering to varied client needs.<br/></p>
+                    <p style={{marginBottom: 20}}><b>✓ Affordable Social Media Tools:</b><br/> Premium features tailored to the freelancer budget.<br/></p>
+                    <p style={{marginBottom: 20}}><b>✓ Client Collaboration Platform:</b><br/> Showcase and refine work with clients using real-time feedback.</p> */}
+                    <div style={{alignItems: 'center', justifyContent: 'center', display: 'flex', margin: 20}}>
+                    <button className={button.button_accent_blue}>Explore now</button>
+                    </div>
+                </div>
+                <div style={{padding: 30, marginLeft: 10, marginRight: 10}}>
+                    <h2 style={{fontWeight: 200, fontSize: 32, marginBottom: 40}}>Digital Agencies & Social Media Managers</h2>
+                    {/* <p style={{marginBottom: 20}}><b>✓ Team Collaboration Tools:</b><br/> Role-specific assignments, permissions management, and streamlined team efforts.<br/></p>
+                    <p style={{marginBottom: 20}}><b>✓ Comprehensive Social Media Reporting:</b><br/> Deliver clear ROI with detailed analytics and adaptable reports.<br/></p>
+                    <p style={{marginBottom: 20}}><b>✓ Efficient Multi-Account Handling:</b><br/> Seamlessly manage bulk campaigns and posts, supporting agency-level scalability.</p> */}
+                    <div style={{alignItems: 'center', justifyContent: 'center', display: 'flex', margin: 20}}>
+                    <button className={button.button_accent_blue}>Explore now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    )
+}
+
+const HowItWorks = () => {
+    return (
+        <>
+        <div style={{maxWidth: 1200, margin: 'auto'}}>
+        <div style={{marginLeft: 120, marginTop: 50, marginBottom: 50, marginRight: 120}}>
+        <h2 className={Belgiano.className} style={{fontSize: 64, marginBottom: '40px'}}>How It Work</h2>
+            <div style={{ display:'flex', flexDirection: 'row'}}>
+
+                <div style={{display: 'flex', flexDirection: 'row', margin: 20}}>
+                    <p className={styles.number} style={{color: '#b5eaff'}}>1.</p>
+                    <div style={{display: 'flex', flexDirection: 'column'}}>
+                    <h3 style={{fontWeight: 200, fontSize: 28, marginTop: 20, marginBottom: 20}}>Compare & Choose Your Plan</h3>
+                    <p>Explore our tailored plans. Whether you're a pro or a beginner, we've got the right package for you.</p>
+                    </div>
+                </div>
+                <div style={{display: 'flex', flexDirection: 'row', margin: 20}}>
+                    <p className={styles.number} style={{color: '#C4F7A1'}}>2.</p>
+                    <div style={{display: 'flex', flexDirection: 'column'}}>
+                     <h3 style={{fontWeight: 200, fontSize: 28, marginTop: 20, marginBottom: 20}}>Try our app for Free for 14 Days</h3>
+                    <p>Dive into a no-obligation 14-day trial. Experience our features and see the difference firsthand.</p>
+                    </div>
+                </div>
+                <div style={{display: 'flex', flexDirection: 'row', margin: 20}}>
+                    <p className={styles.number} style={{color: '#ffb3d5'}}>3.</p>
+                    <div style={{display: 'flex', flexDirection: 'column'}}>
+                     <h3 style={{fontWeight: 200, fontSize: 28, marginTop: 20, marginBottom: 20}}>Onboarding & Link Your Socials</h3>
+                    <p>With our simple onboarding, link your social media accounts in a few clicks and you're set.</p>
+                    </div>
+                </div>
+            </div>
+
+                
+        </div>
+        </div>
+        </>
+    )
+}
+
 export default function Landing() {
     return(
         <>
         <Navbar />
         <Background />
-        <div style={{marginLeft: 120}}>
         <Hero />
-        </div>
+        <Logos />
+        <AllInOne />
+        <PlanSchedule />
+        <Analytics />
+        <StartFreeTrial />
+        <WeareDesigned />
+        <HowItWorks/>
+        <Footer />
         </>
     )
 }

@@ -1,0 +1,158 @@
+.navbar {
+    top: 0;
+    position: sticky;
+    box-sizing: border-box;
+    width: 100%;
+    height: 66px;
+    border-bottom: solid 1px #0d0d0d;
+    background-color: var(--bg);
+    z-index: 999;
+}
+
+.navContent {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.navbar a {
+    text-decoration: none;
+    padding: 0;
+    display: block;
+}
+
+.navbar li {
+    list-style: none;
+    padding: 0 1rem;
+    position: relative;
+}
+
+
+.linksWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.linksWrapper ul{
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    list-style-type: none;
+}
+
+.navLink {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #000;
+}
+
+.hamburger {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.megaMenu{
+    position: absolute;
+    top: 100%;  /* This positions the megamenu right under the navbar */
+    left: 0;
+    width: 100vw;
+    z-index: 1000;  /* To ensure it appears above other content */
+    background-color: var(--bg); 
+    padding: 30px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    transition: all 0.5s ease-in;
+    border: solid 1px var(--black);
+}
+
+
+.megaMenu h3 {
+    color: var(--grey);
+    font-size: 21px;
+    font-weight: 600;
+    padding-left: 12px;
+    
+}
+
+.megaMenu p {
+    color: #424242;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.megaMenubtn, .megaMenubtn2 {
+    background-color: var(--bg);
+    border: none;
+    padding: 12px;
+    font-weight: 600;
+    margin: 6px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.megaMenubtn2:hover {
+    background-color: var(--blue);
+}
+
+.megaMenubtn:hover {
+    background-color: var(--pinkLight);
+}
+
+
+@media screen and (max-width: 900px) 
+{
+    .logo {
+        margin: 2.5rem;
+        display: flex;
+        align-self: flex-start;
+    }
+
+    .hamburger {
+        display: flex;
+        font-size: 1.5em;
+        color: var(--nav-text);
+        cursor: pointer;
+    }
+    
+    .navbar{
+        position: sticky;
+        justify-content: flex-start;
+        width: 100%;
+        top:0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .linksWrapper {
+        padding: 1rem;
+        width: 100%;
+        background-color: var(--bg);
+    }
+
+    .linksWrapper ul {
+        display: flex;
+        flex-direction: column;
+        font-size: 1.2rem;
+    }
+
+    .linksWrapper li {
+        padding: 2rem 0;
+        text-align: center;
+        width: 100%;
+        border-bottom: solid 0.5px #0d0d0d80;
+
+    }
+
+    .linksWrapper button {
+        margin-top: 2rem;
+        font-size: 1.2rem;
+    }
+}
