@@ -1,3 +1,8 @@
+.container {
+  max-width: 1600px;
+  margin: auto;
+}
+
 
 .a {
     text-decoration: none;
@@ -44,20 +49,16 @@
 }
 
 .logoDiv {
-    height: 140px;
-    background-color: var(--pinkLight);
+    height: 110px;
+    /* background-color: var(--pinkLight); */
     /* border: solid 4px var(--pink); */
 }
 
 .logoDiv2 {
-    height: 100px;
+    height: 72px;
     background-color: var(--green);
     cursor: pointer;
 }
-
-
-
-
 
 .carousel {
     overflow: hidden;
@@ -81,15 +82,16 @@
     padding-right: 60px;
     padding-top: 40px;
     box-sizing: border-box;
-    font-size: 52px;
+    font-size: 36px;
     font-weight: bold;
     color: var(--black);
   }
 
   .carouselItem2 {
-    padding-top: 30px;
-    font-size: 32px;
-    font-family: Belgiano;
+    padding-top: 20px;
+    font-size: 24px;
+    font-weight: 300;
+    /* font-family: Belgiano; */
     color: var(--black);
   }
 @keyframes scroll {

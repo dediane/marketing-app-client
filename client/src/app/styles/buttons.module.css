@@ -3,7 +3,7 @@
     color: var(--black);
     border: none;
     padding: 12px;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 16px;
     box-shadow: 2px 2px 0px 0px #000000;
     border: 1px solid var(--black);
@@ -16,7 +16,7 @@
     color: var(--black);
     border: none;
     padding: 12px;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 16px;
     box-shadow: 2px 2px 0px 0px #000000;
     border: 1px solid var(--black);
@@ -36,13 +36,13 @@
   
   .button_big {
     padding: 18px 40px;
-    font-size: 21px;
+    font-size: 18px;
     box-shadow: 4px 4px 0px 0px #000000;
   }
   
   .button_big_accent {
     padding: 18px 40px;
-    font-size: 21px;
+    font-size: 18px;
     box-shadow: 4px 4px 0px 0px #000000;
   }
   

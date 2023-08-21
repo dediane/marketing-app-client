@@ -17,19 +17,19 @@ const Belgiano = localFont({ src: '../../public/fonts/Belgiano.ttf'})
 
 export const Hero = () => {
     return (
-        <div style={{maxWidth: 1200, margin: 'auto'}}>
+        <div className={styles.container}>
             <div style={{height: 'calc(100vh - 66px)',display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
                 <div style={{ flex: 1 , marginLeft: 120}}>
-                    <h1 className={Belgiano.className} style={{fontSize: 90, paddingBottom: '40px'}}>Social Media <br></br>made easy</h1>
-                    <p style={{fontSize: 21, marginBottom: '10px'}}>Manage your social media accounts in one place</p>
-                    <p style={{fontSize: 21, marginBottom: '40px'}}>All in one APP - Get started now!</p>
+                    <h1 className={Belgiano.className} style={{fontSize: 80, paddingBottom: '40px'}}>Social Media <br></br>made easy</h1>
+                    <p style={{fontSize: 18, marginBottom: '10px', fontWeight: 300}}>Manage your social media accounts in one place</p>
+                    <p style={{fontSize: 18, marginBottom: '40px', fontWeight: 300}}>All in one APP - Get started now!</p>
                     <div>
                         <button className={button.button_big_accent}>Start your free trial!</button>
                         <button className={button.button_big}>Learn more</button>
                     </div>
                 </div>
                 <div style={{ flex: 1, marginRight: 120 }} className={styles.imageContainer}>
-                    <Image src={landingIllustration} alt="illustration social network hub" style={{width: 'auto', height: '100%',}}/>
+                    <Image src={landingIllustration} alt="illustration social network hub" style={{width: '100%', height: 'auto',}}/>
                 </div>
             </div>
         </div>
@@ -95,17 +95,17 @@ const StartFreeTrial = () => {
 
 export const AllInOne = () => {
     return (
-        <div style={{maxWidth: 1200, margin: 'auto'}}>
-        <div style={{marginLeft: 120, marginRight: 120, marginTop: 80}}>
+        <div className={styles.container}>
+        <div style={{marginLeft: 120, marginRight: 120, marginTop: 60}}>
             <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
                 <div style={{flex: 1}}>
 
                 </div>
                 <div style={{flex: 1}}>
-                <h2 className={Belgiano.className} style={{fontSize: 64, marginBottom: '40px'}}>Centralize your <br/>social media management</h2>
+                <h2 className={Belgiano.className} style={{fontSize: 46, marginBottom: '40px'}}>Centralize your <br/>social media management</h2>
                 <div style={{marginBottom: '60px'}}>
-                <p style={{fontSize: 18, marginBottom: '10px'}} >All your accounts. One view. No hassle.</p>
-                <p style={{fontSize: 18, marginBottom: '10px'}}> We brings all your social media feeds into one convenient dashboard.</p>
+                <p style={{fontSize: 18, marginBottom: '10px', fontWeight: 300}} >All your accounts. One view. No hassle.</p>
+                <p style={{fontSize: 18, marginBottom: '10px', fontWeight: 300}}> We brings all your social media feeds into one convenient dashboard.</p>
                 </div>
                 <div>
                     <button className={button.button_accent_blue}>Discover our dashboard!</button>
@@ -121,14 +121,14 @@ export const AllInOne = () => {
 
 export const PlanSchedule = () => {
     return (
-        <div style={{maxWidth: 1200, margin: 'auto'}}>
-        <div style={{marginLeft: 120, marginRight: 120, marginTop: 80, marginBottom: 80, maxWidth: '1200px'}}>
+        <div className={styles.container}>
+        <div style={{marginLeft: 120, marginRight: 120, marginTop: 60, marginBottom: 60}}>
             <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
                 <div style={{flex: 1}}>
-                <h2 className={Belgiano.className} style={{fontSize: 64, marginBottom: '40px'}}>Plan and Schedule. <br/>Never forget.</h2>
+                <h2 className={Belgiano.className} style={{fontSize: 46, marginBottom: '40px'}}>Plan and Schedule. <br/>Never forget.</h2>
                 <div style={{marginBottom: '60px'}}>
-                <p style={{fontSize: 18, marginBottom: '10px'}} >All your accounts. One view. No hassle.</p>
-                <p style={{fontSize: 18, marginBottom: '10px'}}> We brings all your social media feeds into one convenient dashboard.</p>
+                <p style={{fontSize: 18, marginBottom: '10px', fontWeight: 300}} >All your accounts. One view. No hassle.</p>
+                <p style={{fontSize: 18, marginBottom: '10px', fontWeight: 300}}> We brings all your social media feeds into one convenient dashboard.</p>
                 </div>
                 <div>
                     <button className={button.button_accent}>Start planning your first Post!</button>
@@ -147,17 +147,17 @@ export const PlanSchedule = () => {
 
 export const Analytics = () => {
     return (
-        <div style={{maxWidth: 1200, margin: 'auto'}}>
+        <div className={styles.container}>
             <div style={{marginLeft: 120, marginRight: 120, marginTop: 80, marginBottom: 80}}>
                 <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
                     <div style={{flex: 1}}>
 
                     </div>
                     <div style={{flex: 1}}>
-                    <h2 className={Belgiano.className} style={{fontSize: 64, marginBottom: '40px'}}>In-depth Analytics</h2>
+                    <h2 className={Belgiano.className} style={{fontSize: 46, marginBottom: '40px'}}>In-depth Analytics</h2>
                     <div style={{marginBottom: '60px'}}>
-                    <p style={{fontSize: 18, marginBottom: '10px'}} >Understand your audience with comprehensive insights and metrics.</p>
-                    <p style={{fontSize: 18, marginBottom: '10px'}} >Monitor the performances of your publication.</p>
+                    <p style={{fontSize: 18, marginBottom: '10px', fontWeight: 300}} >Understand your audience with comprehensive insights and metrics.</p>
+                    <p style={{fontSize: 18, marginBottom: '10px', fontWeight: 300}} >Monitor the performances of your publication.</p>
                     </div>
                     <div>
                         <button className={button.button_accent_pink}>Get exclusive insight!</button>
@@ -173,12 +173,12 @@ export const Analytics = () => {
 
 const WeareDesigned = () => {
     return (
-        <div style={{maxWidth: 1200, margin: 'auto'}}>
+        <div className={styles.container}>
         <div style={{marginLeft: 120, marginTop: 50, marginBottom: 50, marginRight: 120, maxWidth: '1200px'}}>
-            <h2 className={Belgiano.className} style={{fontSize: 64, marginBottom: '40px'}}>We are designed for</h2>
+            <h2 className={Belgiano.className} style={{fontSize: 46, marginBottom: '40px'}}>We are designed for</h2>
             <div style={{display: 'flex', flexDirection: 'row'}}>
                 <div style={{padding: 30, marginLeft: 10, marginRight: 10}}>
-                    <h2 style={{fontWeight: 200, fontSize: 32, marginBottom: 40}}>Business Owners Seeking Online Growth</h2>
+                    <h2 style={{fontWeight: 200, fontSize: 24, marginBottom: 40}}>Business Owners Seeking Online Growth</h2>
                     {/* <p style={{marginBottom: 20}}><b>✓ Optimize Social Media Presence:</b><br/> Elevate your brand's visibility across all leading platforms with our integrated tool.<br/></p>
                     <p style={{marginBottom: 20}}><b>✓ Data-Driven Growth:</b><br/> Harness actionable insights to understand your audience, boosting organic business growth online.<br/></p>
                     <p style={{marginBottom: 20}}><b>✓ Automated Content Scheduling:</b><br/> Plan weeks ahead, allowing more time for core business strategies.</p> */}
@@ -187,7 +187,7 @@ const WeareDesigned = () => {
                     </div>
                 </div>
                 <div style={{padding: 30, marginLeft: 10, marginRight: 10}}>
-                    <h2 style={{fontWeight: 200, fontSize: 32, marginBottom: 40}}> Freelancers Enhancing Digital Profiles</h2>
+                    <h2 style={{fontWeight: 200, fontSize: 24, marginBottom: 40}}> Freelancers Enhancing Digital Profiles</h2>
                     {/* <p style={{marginBottom: 10}}><b>✓ Unified Social Media Dashboard:</b><br/></p>
                     <p style={{marginBottom: 20}}>Effortlessly manage diverse accounts, catering to varied client needs.<br/></p>
                     <p style={{marginBottom: 20}}><b>✓ Affordable Social Media Tools:</b><br/> Premium features tailored to the freelancer budget.<br/></p>
@@ -197,7 +197,7 @@ const WeareDesigned = () => {
                     </div>
                 </div>
                 <div style={{padding: 30, marginLeft: 10, marginRight: 10}}>
-                    <h2 style={{fontWeight: 200, fontSize: 32, marginBottom: 40}}>Digital Agencies & Social Media Managers</h2>
+                    <h2 style={{fontWeight: 200, fontSize: 24, marginBottom: 40}}>Digital Agencies & Social Media Managers</h2>
                     {/* <p style={{marginBottom: 20}}><b>✓ Team Collaboration Tools:</b><br/> Role-specific assignments, permissions management, and streamlined team efforts.<br/></p>
                     <p style={{marginBottom: 20}}><b>✓ Comprehensive Social Media Reporting:</b><br/> Deliver clear ROI with detailed analytics and adaptable reports.<br/></p>
                     <p style={{marginBottom: 20}}><b>✓ Efficient Multi-Account Handling:</b><br/> Seamlessly manage bulk campaigns and posts, supporting agency-level scalability.</p> */}
@@ -214,30 +214,30 @@ const WeareDesigned = () => {
 const HowItWorks = () => {
     return (
         <>
-        <div style={{maxWidth: 1200, margin: 'auto'}}>
+        <div className={styles.container}>
         <div style={{marginLeft: 120, marginTop: 50, marginBottom: 50, marginRight: 120}}>
-        <h2 className={Belgiano.className} style={{fontSize: 64, marginBottom: '40px'}}>How It Work</h2>
+        <h2 className={Belgiano.className} style={{fontSize: 46, marginBottom: '40px'}}>How It Work</h2>
             <div style={{ display:'flex', flexDirection: 'row'}}>
 
                 <div style={{display: 'flex', flexDirection: 'row', margin: 20}}>
-                    <p className={styles.number} style={{color: '#b5eaff'}}>1.</p>
+                    <p className={styles.number} style={{color: '#C4F7A1', textShadow: '1px 1px 1px black'}}>1.</p>
                     <div style={{display: 'flex', flexDirection: 'column'}}>
-                    <h3 style={{fontWeight: 200, fontSize: 28, marginTop: 20, marginBottom: 20}}>Compare & Choose Your Plan</h3>
-                    <p>Explore our tailored plans. Whether you're a pro or a beginner, we've got the right package for you.</p>
+                    <h3 style={{fontWeight: 200, fontSize: 24, marginTop: 20, marginBottom: 20}}>Compare & Choose Your Plan</h3>
+                    <p style={{fontWeight: 300}}>Explore our tailored plans. Whether you're a pro or a beginner, we've got the right package for you.</p>
                     </div>
                 </div>
                 <div style={{display: 'flex', flexDirection: 'row', margin: 20}}>
-                    <p className={styles.number} style={{color: '#C4F7A1'}}>2.</p>
+                    <p className={styles.number} style={{color: '#b5eaff', textShadow: '1px 1px 1px black'}}>2.</p>
                     <div style={{display: 'flex', flexDirection: 'column'}}>
-                     <h3 style={{fontWeight: 200, fontSize: 28, marginTop: 20, marginBottom: 20}}>Try our app for Free for 14 Days</h3>
-                    <p>Dive into a no-obligation 14-day trial. Experience our features and see the difference firsthand.</p>
+                     <h3 style={{fontWeight: 200, fontSize: 24, marginTop: 20, marginBottom: 20}}>Try our app for Free for 14 Days</h3>
+                    <p style={{fontWeight: 300}}>Dive into a no-obligation 14-day trial. Experience our features and see the difference firsthand.</p>
                     </div>
                 </div>
                 <div style={{display: 'flex', flexDirection: 'row', margin: 20}}>
-                    <p className={styles.number} style={{color: '#ffb3d5'}}>3.</p>
+                    <p className={styles.number} style={{color: '#ffb3d5', textShadow: '1px 1px 1px black'}}>3.</p>
                     <div style={{display: 'flex', flexDirection: 'column'}}>
-                     <h3 style={{fontWeight: 200, fontSize: 28, marginTop: 20, marginBottom: 20}}>Onboarding & Link Your Socials</h3>
-                    <p>With our simple onboarding, link your social media accounts in a few clicks and you're set.</p>
+                     <h3 style={{fontWeight: 200, fontSize: 24, marginTop: 20, marginBottom: 20}}>Onboarding & Link Your Socials</h3>
+                    <p style={{fontWeight: 300}}>With our simple onboarding, link your social media accounts in a few clicks and you're set.</p>
                     </div>
                 </div>
             </div>
@@ -249,19 +249,27 @@ const HowItWorks = () => {
     )
 }
 
-export default function Landing() {
-    return(
+const Main = () => {
+    return (
         <>
-        <Navbar />
-        <Background />
         <Hero />
         <Logos />
         <AllInOne />
         <PlanSchedule />
         <Analytics />
+        <HowItWorks/>
         <StartFreeTrial />
         <WeareDesigned />
-        <HowItWorks/>
+        </>
+    )
+}
+
+export default function Landing() {
+    return(
+        <>
+        <Navbar />
+        <Background />
+        <Main/>
         <Footer />
         </>
     )

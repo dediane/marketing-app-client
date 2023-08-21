@@ -64,56 +64,55 @@ export default function Navbar() {
                 <IoMenuOutline onClick={handleShowNav} className={styles.hamburger} size='1.5em'/>
                 </div>
                 {openMenu === 'menu1' && (<div className={styles.megaMenu} onMouseLeave={(e) => handleMouseLeave(e, menu1Ref)}>
-                    <div style={{padding:'40px'}}>
-                        <h3 style={{borderLeft: 'solid 12px #ff78b5', fontSize: 24}} className={Belgiano.className}>Social Media made easy</h3>
-                        <p style={{marginBottom: '20px', marginTop: '10px', paddingLeft:'12px'}}>Manage your social media accounts in one place</p>
-                        <hr style={{marginBottom: '20px'}}/>
-                        <div className={styles.megaMenubtn} onClick={() => router.push('/publish-schedule')}>
-                            <h4 className={styles.subtitle}>Publish & Schedule</h4>
-                            <p>Plan your posts and get constant communication</p>
+                    <div className={styles.container} style={{display: "flex", flexDirection: "row"}}>
+                        <div style={{padding:'40px'}}>
+                            <h3 style={{borderLeft: 'solid 12px #ff78b5', fontSize: 24}} className={Belgiano.className}>Social Media made easy</h3>
+                            <p style={{marginBottom: '20px', marginTop: '10px', paddingLeft:'12px'}}>Manage your social media accounts in one place</p>
+                            <hr style={{marginBottom: '20px'}}/>
+                            <div className={styles.megaMenubtn} onClick={() => router.push('/publish-schedule')}>
+                                <h4 className={styles.subtitle}>Publish & Schedule</h4>
+                                <p>Plan your posts and get constant communication</p>
+                            </div>
+                            <div className={styles.megaMenubtn} onClick={() => router.push('/monitor-activities')}>
+                                <h4 className={styles.subtitle}>Monitor activity</h4>
+                                <p>Track activity on your Social Media</p>
+                            </div>
+                            <div className={styles.megaMenubtn} onClick={() => router.push('/get-analytics')}>
+                                <h4 className={styles.subtitle}>Get Analytics</h4>
+                                <p>Get insights on your audience</p>
+                            </div>
+                            <div className={styles.megaMenubtn} onClick={() => router.push('/engage-customers')}>
+                                <h4 className={styles.subtitle}>Engage customers</h4>
+                                <p>Communicate with your audience</p>
+                            </div>
                         </div>
-                        <div className={styles.megaMenubtn} onClick={() => router.push('/monitor-activities')}>
-                            <h4 className={styles.subtitle}>Monitor activity</h4>
-                            <p>Track activity on your Social Media</p>
+                        <div style={{padding:'40px'}}>
+                            <h3 style={{borderLeft: 'solid 12px #49cbff', fontSize: 24}} className={Belgiano.className}>Lite hub for your socials</h3>
+                            <p style={{marginBottom: '20px', marginTop: '10px', paddingLeft:'12px'}}>Hassle-free social media management</p>
+                            <hr style={{marginBottom: '20px'}}/>
+                            <div className={styles.megaMenubtn2} onClick={() => router.push('/publish-schedule')}>
+                                <h4 className={styles.subtitle}>One inbox for all your social medias</h4>
+                                <p>Don't miss any message, get them all in one place</p>
+                            </div>
+                            <div className={styles.megaMenubtn2} onClick={() => router.push('/monitor-activities')}>
+                                <h4 className={styles.subtitle}>AI powered assistant</h4>
+                                <p>Use our AI assistant to generate Comments and Captions</p>
+                            </div>
+                            <div className={styles.megaMenubtn2} onClick={() => router.push('/get-analytics')}>
+                                <h4 className={styles.subtitle}>PDF exportable</h4>
+                                <p>Discuss about your marketing strategy with our PDF analytics overview</p>
+                            </div>
+                            <div className={styles.megaMenubtn2} onClick={() => router.push('/engage-customers')}>
+                                <h4 className={styles.subtitle}>Convert your followers to customers</h4>
+                                <p>Grow your community and convert them with a good communication</p>
+                            </div>
                         </div>
-                        <div className={styles.megaMenubtn} onClick={() => router.push('/get-analytics')}>
-                            <h4 className={styles.subtitle}>Get Analytics</h4>
-                            <p>Get insights on your audience</p>
+                        <div>
+                        <Link href='#'>How to get better Analytics</Link>
+                        <Link href='#'>Engage your audience with good communication</Link>
                         </div>
-                        <div className={styles.megaMenubtn} onClick={() => router.push('/engage-customers')}>
-                            <h4 className={styles.subtitle}>Engage customers</h4>
-                            <p>Communicate with your audience</p>
-                         </div>
-                    </div>
-                    <div style={{padding:'40px'}}>
-                        <h3 style={{borderLeft: 'solid 12px #49cbff', fontSize: 24}} className={Belgiano.className}>Lite hub for your socials</h3>
-                        <p style={{marginBottom: '20px', marginTop: '10px', paddingLeft:'12px'}}>Hassle-free social media management</p>
-                        <hr style={{marginBottom: '20px'}}/>
-                        <div className={styles.megaMenubtn2} onClick={() => router.push('/publish-schedule')}>
-                            <h4 className={styles.subtitle}>One inbox for all your social medias</h4>
-                            <p>Don't miss any message, get them all in one place</p>
                         </div>
-                        <div className={styles.megaMenubtn2} onClick={() => router.push('/monitor-activities')}>
-                            <h4 className={styles.subtitle}>AI powered assistant</h4>
-                            <p>Use our AI assistant to generate Comments and Captions</p>
-                        </div>
-                        <div className={styles.megaMenubtn2} onClick={() => router.push('/get-analytics')}>
-                            <h4 className={styles.subtitle}>PDF exportable</h4>
-                            <p>Discuss about your marketing strategy with our PDF analytics overview</p>
-                        </div>
-                        <div className={styles.megaMenubtn2} onClick={() => router.push('/engage-customers')}>
-                            <h4 className={styles.subtitle}>Convert your followers to customers</h4>
-                            <p>Grow your community and convert them with a good communication</p>
-                         </div>
-                    </div>
-                    <div>
-                    <Link href='#'>How to get better Analytics</Link>
-                    <Link href='#'>Engage your audience with good communication</Link>
-                    </div>
-                    <div>
-                        
-                    </div>
-                </div>)}
+                    </div>)}
                 {openMenu === 'menu2' && (<div className={styles.megaMenu} onMouseLeave={(e) => handleMouseLeave(e, menu2Ref)}>
                     <Link href='#'>How to get better Analytics</Link>
                     <Link href='#'>Engage your audience with good communication</Link>
