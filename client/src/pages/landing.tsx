@@ -4,10 +4,11 @@ import button from '../app/styles/buttons.module.css'
 import React, {useContext, useEffect, useRef, useState} from "react";
 import Image from 'next/image';
 import Link from 'next/link';
-import {IoMenuOutline, IoLogoInstagram, IoLogoFacebook, IoLogoTiktok, IoLogoPinterest, IoLogoTwitter} from 'react-icons/io5';
+import {IoMenuOutline, IoLogoInstagram, IoLogoFacebook, IoLogoTiktok, IoLogoPinterest, IoLogoTwitter, IoRocketOutline} from 'react-icons/io5';
 import useWindowSize from '@/app/hooks/windowSize';
 import { Router, useRouter } from 'next/router'
 import landingIllustration from '../../public/assets/landing.png';
+import centralize from '../../public/assets/Buffer.gif'
 import localFont from 'next/font/local'
 import Footer from '@/app/components/footer';
 import Navbar from '@/app/components/navbar';
@@ -29,7 +30,7 @@ export const Hero = () => {
                     </div>
                 </div>
                 <div style={{ flex: 1, marginRight: 120 }} className={styles.imageContainer}>
-                    <Image src={landingIllustration} alt="illustration social network hub" style={{width: '100%', height: 'auto',}}/>
+                    <Image src={landingIllustration} alt="illustration social network hub" style={{width: 'auto', height: '100%', objectFit: 'contain'}}/>
                 </div>
             </div>
         </div>
@@ -74,7 +75,7 @@ export const Logos = () => {
 
 const StartFreeTrial = () => {
     const router = useRouter();
-    const items = ['Start your free trial', 'Start your free trial', 'Start your free trial', 'Start your free trial', 'Start your free trial', 'Start your free trial', 'Start your free trial']
+    const items = ['Start your free trial', <IoRocketOutline/> , 'Start your free trial',  <IoRocketOutline/>,'Start your free trial', <IoRocketOutline/> , 'Start your free trial',  <IoRocketOutline/>,'Start your free trial', <IoRocketOutline/> , 'Start your free trial',  <IoRocketOutline/>,'Start your free trial', <IoRocketOutline/> , 'Start your free trial',  <IoRocketOutline/>,]
     return (
         <div className={styles.logoDiv2} onClick={() => router.push('/login')}>
             <div className={styles.carousel}>
@@ -98,19 +99,19 @@ export const AllInOne = () => {
         <div className={styles.container}>
         <div style={{marginLeft: 120, marginRight: 120, marginTop: 60}}>
             <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
-                <div style={{flex: 1}}>
-
+            <div style={{ flex: 1 }} className={styles.imageContainer}>
+                    {/* <Image src={centralize} alt="illustration social network hub" style={{width: 'auto', height: '500PX', objectFit: 'contain'}}/> */}
                 </div>
                 <div style={{flex: 1}}>
-                <h2 className={Belgiano.className} style={{fontSize: 46, marginBottom: '40px'}}>Centralize your <br/>social media management</h2>
-                <div style={{marginBottom: '60px'}}>
-                <p style={{fontSize: 18, marginBottom: '10px', fontWeight: 300}} >All your accounts. One view. No hassle.</p>
-                <p style={{fontSize: 18, marginBottom: '10px', fontWeight: 300}}> We brings all your social media feeds into one convenient dashboard.</p>
-                </div>
-                <div>
-                    <button className={button.button_accent_blue}>Discover our dashboard!</button>
-                    <button className={button.button}>Learn more</button>
-                </div>
+                    <h2 className={Belgiano.className} style={{fontSize: 46, marginBottom: '40px'}}>Centralize your <br/>social media management</h2>
+                    <div style={{marginBottom: '60px'}}>
+                    <p style={{fontSize: 18, marginBottom: '10px', fontWeight: 300}} >All your accounts. One view. No hassle.</p>
+                    <p style={{fontSize: 18, marginBottom: '10px', fontWeight: 300}}> We brings all your social media feeds into one convenient dashboard.</p>
+                    </div>
+                    <div>
+                        <button className={button.button_accent_blue}>Discover our dashboard!</button>
+                        <button className={button.button}>Learn more</button>
+                    </div>
                 </div>
 
                 </div>
@@ -126,17 +127,17 @@ export const PlanSchedule = () => {
             <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
                 <div style={{flex: 1}}>
                 <h2 className={Belgiano.className} style={{fontSize: 46, marginBottom: '40px'}}>Plan and Schedule. <br/>Never forget.</h2>
-                <div style={{marginBottom: '60px'}}>
-                <p style={{fontSize: 18, marginBottom: '10px', fontWeight: 300}} >All your accounts. One view. No hassle.</p>
-                <p style={{fontSize: 18, marginBottom: '10px', fontWeight: 300}}> We brings all your social media feeds into one convenient dashboard.</p>
+                    <div style={{marginBottom: '60px'}}>
+                    <p style={{fontSize: 18, marginBottom: '10px', fontWeight: 300}} >All your accounts. One view. No hassle.</p>
+                    <p style={{fontSize: 18, marginBottom: '10px', fontWeight: 300}}> We brings all your social media feeds into one convenient dashboard.</p>
+                    </div>
+                    <div>
+                        <button className={button.button_accent}>Start planning your first Post!</button>
+                        <button className={button.button}>Learn more</button>
+                    </div>
                 </div>
-                <div>
-                    <button className={button.button_accent}>Start planning your first Post!</button>
-                    <button className={button.button}>Learn more</button>
-                </div>
-                <div style={{flex: 1}}>
-
-                </div>
+                <div style={{ flex: 1 }} className={styles.imageContainer}>
+                    {/* <Image src={landingIllustration} alt="illustration social network hub" style={{width: 'auto', height: '100%', objectFit: 'contain'}}/> */}
                 </div>
 
             </div>
