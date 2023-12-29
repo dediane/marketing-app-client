@@ -67,12 +67,12 @@ export default function Footer() {
                 <div className={styles.socialIcons}>
                     <h2 className={Belgiano.className}>Follow us</h2>
                     <div style={{paddingTop: 10}}>
-                        <a href="#"><IoLogoFacebook/></a>
-                        <a href="#"><IoLogoInstagram/></a>
-                        <a href="#"><IoLogoLinkedin/></a>
+                        <a className={styles.hoverBlue} href="#"><IoLogoFacebook/></a>
+                        <a className={styles.hoverPink} href="#"><IoLogoInstagram/></a>
+                        <a className={styles.hoverBlue}href="#"><IoLogoLinkedin/></a>
                         <a href="#"><IoLogoTiktok/></a>
-                        <a href="#"><IoLogoTwitter /></a>
-                        <a href="#"><IoLogoPinterest/></a>
+                        <a className={styles.hoverBlue} href="#"><IoLogoTwitter /></a>
+                        <a className={styles.hoverRed} href="#"><IoLogoPinterest/></a>
                     </div>
                 </div>
                 </section>
@@ -91,7 +91,9 @@ export default function Footer() {
                     </form>
                 </section>
             </div>
+            <div style={{paddingTop: 20, paddingBottom: 20}}>
             <hr className={styles.hr}/>
+            </div>
             <div className={styles.container}>
                 <section className={styles.section}>
                     <span>&copy; 2023 Your Company - All Rights Reserved</span>

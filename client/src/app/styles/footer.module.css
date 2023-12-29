@@ -38,7 +38,8 @@
 
 .hr {
     max-width: 1200px;
-    border-color: var(--black);
+    /* border-color: var(--black) !important; */
+    border: 0.5px solid var(--black);
     margin: 0 auto;
 }
 
@@ -93,4 +94,16 @@
 
 .socialIcons a:hover {
     color: var(--grey);
+}
+
+.hoverBlue:hover {
+    color: #2888f6 !important;
+}
+
+.hoverRed:hover {
+    color: #f62828 !important;
+}
+
+.hoverPink:hover {
+    color: #cd4fe7 !important;
 }

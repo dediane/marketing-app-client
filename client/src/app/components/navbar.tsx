@@ -24,9 +24,25 @@ export default function Navbar() {
         setOpenMenu(menuName);
     };
     
-    const handleMouseLeave = (e :any, ref :any) => {
-        if (!ref.current.contains(e.relatedTarget)) {
-            setOpenMenu(null);
+    // const handleMouseLeave = (e :any, ref :any) => {
+    //     if (e.relatedTarget && e.relatedTarget instanceof Node && !ref.current.contains(e.relatedTarget)) {
+    //         setOpenMenu(null);
+    //     }
+    // };
+
+    const handleMouseLeave = (e: any, ref: any) => {
+        if (ref.current) {
+            const boundingBox = ref.current.getBoundingClientRect();
+    
+            const isOutside =
+                e.clientX < boundingBox.left ||
+                e.clientX > boundingBox.right ||
+                e.clientY < boundingBox.top ||
+                e.clientY > boundingBox.bottom;
+    
+            if (isOutside) {
+                setOpenMenu(null);
+            }
         }
     };
 
@@ -56,8 +72,8 @@ export default function Navbar() {
                     </ul>
                 </div> 
                 <div className={styles.buttonsWrapper}>
-                        <button className={button.button}>Log in</button>
-                        <button className={button.button_accent}>Start your free trial!</button>
+                        <button className={button.button} onClick={() => router.push('/login')}>Log in</button>
+                        <button className={button.button_accent} onClick={() => router.push('/register')}>Start your free trial!</button>
                 </div>
                 </>
                 )}

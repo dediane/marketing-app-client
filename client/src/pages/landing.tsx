@@ -17,6 +17,7 @@ const Belgiano = localFont({ src: '../../public/fonts/Belgiano.ttf'})
 
 
 export const Hero = () => {
+    const router = useRouter();
     return (
         <div className={styles.container}>
             <div style={{height: 'calc(100vh - 66px)',display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
@@ -25,7 +26,7 @@ export const Hero = () => {
                     <p style={{fontSize: 18, marginBottom: '10px', fontWeight: 300}}>Manage your social media accounts in one place</p>
                     <p style={{fontSize: 18, marginBottom: '40px', fontWeight: 300}}>All in one APP - Get started now!</p>
                     <div>
-                        <button className={button.button_big_accent}>Start your free trial!</button>
+                        <button className={button.button_big_accent} onClick={() => router.push('/register')}>Start your free trial!</button>
                         <button className={button.button_big}>Learn more</button>
                     </div>
                 </div>
@@ -77,7 +78,7 @@ const StartFreeTrial = () => {
     const router = useRouter();
     const items = ['Start your free trial', <IoRocketOutline/> , 'Start your free trial',  <IoRocketOutline/>,'Start your free trial', <IoRocketOutline/> , 'Start your free trial',  <IoRocketOutline/>,'Start your free trial', <IoRocketOutline/> , 'Start your free trial',  <IoRocketOutline/>,'Start your free trial', <IoRocketOutline/> , 'Start your free trial',  <IoRocketOutline/>,]
     return (
-        <div className={styles.logoDiv2} onClick={() => router.push('/login')}>
+        <div className={styles.logoDiv2} onClick={() => router.push('/register')}>
             <div className={styles.carousel}>
                 <div className={styles.carouselInner2}>
                     {items.map((item, idx) => (
@@ -95,21 +96,22 @@ const StartFreeTrial = () => {
 }
 
 export const AllInOne = () => {
+    const router = useRouter();
     return (
         <div className={styles.container}>
-        <div style={{marginLeft: 120, marginRight: 120, marginTop: 60}}>
-            <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
-            <div style={{ flex: 1 }} className={styles.imageContainer}>
+        <div className={styles.card}>
+            <div className={styles.cardWrapper}>
+            <div className={styles.imageContainer}>
                     {/* <Image src={centralize} alt="illustration social network hub" style={{width: 'auto', height: '500PX', objectFit: 'contain'}}/> */}
                 </div>
                 <div style={{flex: 1}}>
-                    <h2 className={Belgiano.className} style={{fontSize: 46, marginBottom: '40px'}}>Centralize your <br/>social media management</h2>
+                    <h2 className={Belgiano.className}>Centralize your <br/>social media management</h2>
                     <div style={{marginBottom: '60px'}}>
-                    <p style={{fontSize: 18, marginBottom: '10px', fontWeight: 300}} >All your accounts. One view. No hassle.</p>
-                    <p style={{fontSize: 18, marginBottom: '10px', fontWeight: 300}}> We brings all your social media feeds into one convenient dashboard.</p>
+                    <p>All your accounts. One view. No hassle.</p>
+                    <p> We brings all your social media feeds into one convenient dashboard.</p>
                     </div>
                     <div>
-                        <button className={button.button_accent_blue}>Discover our dashboard!</button>
+                        <button className={button.button_accent_blue} onClick={() => router.push('/register')}>Discover our dashboard!</button>
                         <button className={button.button}>Learn more</button>
                     </div>
                 </div>
@@ -121,22 +123,23 @@ export const AllInOne = () => {
 }
 
 export const PlanSchedule = () => {
+    const router = useRouter();
     return (
         <div className={styles.container}>
-        <div style={{marginLeft: 120, marginRight: 120, marginTop: 60, marginBottom: 60}}>
-            <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
+        <div className={styles.card}>
+            <div className={styles.cardWrapper}>
                 <div style={{flex: 1}}>
-                <h2 className={Belgiano.className} style={{fontSize: 46, marginBottom: '40px'}}>Plan and Schedule. <br/>Never forget.</h2>
+                <h2 className={Belgiano.className}>Plan and Schedule. <br/>Never forget.</h2>
                     <div style={{marginBottom: '60px'}}>
-                    <p style={{fontSize: 18, marginBottom: '10px', fontWeight: 300}} >All your accounts. One view. No hassle.</p>
-                    <p style={{fontSize: 18, marginBottom: '10px', fontWeight: 300}}> We brings all your social media feeds into one convenient dashboard.</p>
+                    <p>All your accounts. One view. No hassle.</p>
+                    <p> We brings all your social media feeds into one convenient dashboard.</p>
                     </div>
                     <div>
-                        <button className={button.button_accent}>Start planning your first Post!</button>
+                        <button className={button.button_accent} onClick={() => router.push('/register')}>Start planning your first Post!</button>
                         <button className={button.button}>Learn more</button>
                     </div>
                 </div>
-                <div style={{ flex: 1 }} className={styles.imageContainer}>
+                <div className={styles.imageContainer}>
                     {/* <Image src={landingIllustration} alt="illustration social network hub" style={{width: 'auto', height: '100%', objectFit: 'contain'}}/> */}
                 </div>
 
@@ -147,21 +150,22 @@ export const PlanSchedule = () => {
 }
 
 export const Analytics = () => {
+    const router = useRouter();
     return (
         <div className={styles.container}>
-            <div style={{marginLeft: 120, marginRight: 120, marginTop: 80, marginBottom: 80}}>
-                <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
+            <div className={styles.card}>
+                <div className={styles.cardWrapper}>
                     <div style={{flex: 1}}>
 
                     </div>
                     <div style={{flex: 1}}>
-                    <h2 className={Belgiano.className} style={{fontSize: 46, marginBottom: '40px'}}>In-depth Analytics</h2>
+                    <h2 className={Belgiano.className}>In-depth Analytics</h2>
                     <div style={{marginBottom: '60px'}}>
-                    <p style={{fontSize: 18, marginBottom: '10px', fontWeight: 300}} >Understand your audience with comprehensive insights and metrics.</p>
-                    <p style={{fontSize: 18, marginBottom: '10px', fontWeight: 300}} >Monitor the performances of your publication.</p>
+                    <p>Understand your audience with comprehensive insights and metrics.</p>
+                    <p>Monitor the performances of your publication.</p>
                     </div>
                     <div>
-                        <button className={button.button_accent_pink}>Get exclusive insight!</button>
+                        <button className={button.button_accent_pink} onClick={() => router.push('/register')}>Get exclusive insight!</button>
                         <button className={button.button}>Learn more</button>
                     </div>
                     </div>
@@ -222,21 +226,21 @@ const HowItWorks = () => {
 
                 <div style={{display: 'flex', flexDirection: 'row', margin: 20}}>
                     <p className={styles.number} style={{color: '#C4F7A1', textShadow: '1px 1px 1px black'}}>1.</p>
-                    <div style={{display: 'flex', flexDirection: 'column'}}>
+                    <div style={{display: 'flex', flexDirection: 'column', paddingLeft: 20}}>
                     <h3 style={{fontWeight: 200, fontSize: 24, marginTop: 20, marginBottom: 20}}>Compare & Choose Your Plan</h3>
                     <p style={{fontWeight: 300}}>Explore our tailored plans. Whether you're a pro or a beginner, we've got the right package for you.</p>
                     </div>
                 </div>
                 <div style={{display: 'flex', flexDirection: 'row', margin: 20}}>
                     <p className={styles.number} style={{color: '#b5eaff', textShadow: '1px 1px 1px black'}}>2.</p>
-                    <div style={{display: 'flex', flexDirection: 'column'}}>
+                    <div style={{display: 'flex', flexDirection: 'column', paddingLeft: 20}}>
                      <h3 style={{fontWeight: 200, fontSize: 24, marginTop: 20, marginBottom: 20}}>Try our app for Free for 14 Days</h3>
                     <p style={{fontWeight: 300}}>Dive into a no-obligation 14-day trial. Experience our features and see the difference firsthand.</p>
                     </div>
                 </div>
                 <div style={{display: 'flex', flexDirection: 'row', margin: 20}}>
                     <p className={styles.number} style={{color: '#ffb3d5', textShadow: '1px 1px 1px black'}}>3.</p>
-                    <div style={{display: 'flex', flexDirection: 'column'}}>
+                    <div style={{display: 'flex', flexDirection: 'column', paddingLeft: 20}}>
                      <h3 style={{fontWeight: 200, fontSize: 24, marginTop: 20, marginBottom: 20}}>Onboarding & Link Your Socials</h3>
                     <p style={{fontWeight: 300}}>With our simple onboarding, link your social media accounts in a few clicks and you're set.</p>
                     </div>

@@ -10,10 +10,10 @@ export default function Authentication() {
     const [isLogin, setIsLogin] = React.useState(true);
     return (
     <div style={{ display: "flex", justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-        <div style={{width: 400, padding: 20, height: 500, borderColor: 'black', borderStyle: 'solid', borderWidth: '2px'}}>
+        <div style={{width: '36vw', padding: 20, height: '80vh', borderColor: 'black', borderStyle: 'solid', borderWidth: '2px'}}>
             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <button onClick={() => setIsLogin(true)}>Login</button>
-                <button onClick={() => setIsLogin(false)}>Register</button>
+                {/* <button onClick={() => setIsLogin(false)}>Register</button> */}
             </div>
             {!isLogin && <Register />}
             {isLogin && <Login />}
