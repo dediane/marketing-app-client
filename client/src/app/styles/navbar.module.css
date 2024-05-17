@@ -30,6 +30,12 @@
     display: block;
 }
 
+.navbar a:hover {
+    text-decoration: underline;
+    color: var(--blueDark);
+    padding: 0;
+    display: block;
+}
 .navbar li {
     list-style: none;
     padding: 0 1rem;
