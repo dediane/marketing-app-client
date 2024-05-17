@@ -33,18 +33,18 @@ export const Hero = () => {
             className={styles.container}>
             <div style={{ height: 'calc(100vh - 66px)', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
                 <div style={{ flex: 1, marginLeft: 120 }}>
-                    <motion.h1 
-                    initial={{ opacity: 0, y: -80 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 20 }}
-                    transition={{
-                        type: 'spring',
-                        stiffness: 50,
-                        damping: 50,
-                        duration: 0.5,
-                        delay: 0.5
-                    }}
-                    className={Belgiano.className} style={{ fontSize: 80, paddingBottom: '40px' }}>Social Media <br></br>made easy</motion.h1>
+                    <motion.h1
+                        initial={{ opacity: 0, y: -80 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 20 }}
+                        transition={{
+                            type: 'spring',
+                            stiffness: 50,
+                            damping: 50,
+                            duration: 0.5,
+                            delay: 0.5
+                        }}
+                        className={Belgiano.className} style={{ fontSize: 80, paddingBottom: '40px' }}>Social Media <br></br>made easy</motion.h1>
                     <p style={{ fontSize: 18, marginBottom: '10px', fontWeight: 300 }}>Manage your social media accounts in one place</p>
                     <p style={{ fontSize: 18, marginBottom: '40px', fontWeight: 300 }}>All in one APP - Get started now!</p>
                     <div>
@@ -205,32 +205,34 @@ const WeareDesigned = () => {
     return (
         <div className={styles.container}>
             <div style={{ marginLeft: 120, marginTop: 50, marginBottom: 50, marginRight: 120, maxWidth: '1200px' }}>
-                <h2 className={Belgiano.className} style={{ fontSize: 46, marginBottom: '40px' }}>We are designed for</h2>
+                <h2 className={Belgiano.className} style={{ fontSize: 46, marginBottom: '20px' }}>We are designed for</h2>
                 <div style={{ display: 'flex', flexDirection: 'row' }}>
-                    <div style={{ padding: 30, marginLeft: 10, marginRight: 10 }}>
-                        <h2 style={{ fontWeight: 200, fontSize: 24, marginBottom: 40 }}>Business Owners Seeking Online Growth</h2>
-                        {/* <p style={{marginBottom: 20}}><b>✓ Optimize Social Media Presence:</b><br/> Elevate your brand's visibility across all leading platforms with our integrated tool.<br/></p>
-                    <p style={{marginBottom: 20}}><b>✓ Data-Driven Growth:</b><br/> Harness actionable insights to understand your audience, boosting organic business growth online.<br/></p>
-                    <p style={{marginBottom: 20}}><b>✓ Automated Content Scheduling:</b><br/> Plan weeks ahead, allowing more time for core business strategies.</p> */}
+                    <div style={{ padding: 30, marginLeft: 10, marginRight: 10, flex: 1 }}>
+                    <Image src="/assets/pic1.jpg" alt="illustration" width={300} height={160} style={{objectFit: 'cover', borderRadius: "20px", marginLeft: 'auto', marginRight: 'auto', marginBottom: '10px'}} />
+                        <h2 style={{ fontWeight: 200, fontSize: 24, marginBottom: 20 }}>Business Owners Seeking Online Growth</h2>
+                        <p style={{ marginBottom: 20, fontWeight: 200 }}><b>✓ Optimize Social Media Presence:</b><br /> Elevate your brand's visibility across all leading platforms with our integrated tool.<br /></p>
+                        <p style={{ marginBottom: 20, fontWeight: 200 }}><b>✓ Data-Driven Growth:</b><br /> Harness actionable insights to understand your audience, boosting organic business growth online.<br /></p>
+                        <p style={{ marginBottom: 20, fontWeight: 200 }}><b>✓ Automated Content Scheduling:</b><br /> Plan weeks ahead, allowing more time for core business strategies.</p>
                         <div style={{ alignItems: 'center', justifyContent: 'center', display: 'flex', margin: 20 }}>
                             <button className={button.button_accent_blue}>Explore now</button>
                         </div>
                     </div>
-                    <div style={{ padding: 30, marginLeft: 10, marginRight: 10 }}>
-                        <h2 style={{ fontWeight: 200, fontSize: 24, marginBottom: 40 }}> Freelancers Enhancing Digital Profiles</h2>
-                        {/* <p style={{marginBottom: 10}}><b>✓ Unified Social Media Dashboard:</b><br/></p>
-                    <p style={{marginBottom: 20}}>Effortlessly manage diverse accounts, catering to varied client needs.<br/></p>
-                    <p style={{marginBottom: 20}}><b>✓ Affordable Social Media Tools:</b><br/> Premium features tailored to the freelancer budget.<br/></p>
-                    <p style={{marginBottom: 20}}><b>✓ Client Collaboration Platform:</b><br/> Showcase and refine work with clients using real-time feedback.</p> */}
+                    <div style={{ padding: 30, marginLeft: 10, marginRight: 10, flex: 1 }}>
+                        <Image src="/assets/pic4.jpg" alt="illustration" width={300} height={160} style={{objectFit: 'cover', borderRadius: "20px", marginLeft: 'auto', marginRight: 'auto', marginBottom: '10px'}} />
+                        <h2 style={{ fontWeight: 200, fontSize: 24, marginBottom: 20 }}> Freelancers Enhancing Digital Profiles</h2>
+                        <p style={{ marginBottom: 20, fontWeight: 200 }}><b>✓ Unified Social Media Dashboard:</b><br />Effortlessly manage diverse accounts, catering to varied client needs.<br /></p>
+                        <p style={{ marginBottom: 20, fontWeight: 200 }}><b>✓ Affordable essential Social Media Tools:</b><br /> Premium features tailored to the freelancer budget.<br /></p>
+                        <p style={{ marginBottom: 20, fontWeight: 200 }}><b>✓ Client Collaboration Platform:</b><br /> Showcase and refine work with clients using real-time feedback.</p>
                         <div style={{ alignItems: 'center', justifyContent: 'center', display: 'flex', margin: 20 }}>
                             <button className={button.button_accent_blue}>Explore now</button>
                         </div>
                     </div>
-                    <div style={{ padding: 30, marginLeft: 10, marginRight: 10 }}>
-                        <h2 style={{ fontWeight: 200, fontSize: 24, marginBottom: 40 }}>Digital Agencies & Social Media Managers</h2>
-                        {/* <p style={{marginBottom: 20}}><b>✓ Team Collaboration Tools:</b><br/> Role-specific assignments, permissions management, and streamlined team efforts.<br/></p>
-                    <p style={{marginBottom: 20}}><b>✓ Comprehensive Social Media Reporting:</b><br/> Deliver clear ROI with detailed analytics and adaptable reports.<br/></p>
-                    <p style={{marginBottom: 20}}><b>✓ Efficient Multi-Account Handling:</b><br/> Seamlessly manage bulk campaigns and posts, supporting agency-level scalability.</p> */}
+                    <div style={{ padding: 30, marginLeft: 10, marginRight: 10, flex: 1 }}>
+                    <Image src="/assets/pic3.jpg" alt="illustration" width={300} height={160} style={{objectFit: 'cover', borderRadius: "20px", marginLeft: 'auto', marginRight: 'auto', marginBottom: '10px'}} />
+                        <h2 style={{ fontWeight: 200, fontSize: 24, marginBottom: 20 }}>Digital Agencies & Social Media Managers</h2>
+                        <p style={{ marginBottom: 20, fontWeight: 200 }}><b>✓ Team Collaboration Tools:</b><br /> Role-specific assignments, permissions management, and streamlined team efforts.<br /></p>
+                        <p style={{ marginBottom: 20, fontWeight: 200 }}><b>✓ Comprehensive Social Media Reporting:</b><br /> Deliver clear ROI with detailed analytics and adaptable reports.<br /></p>
+                        <p style={{ marginBottom: 20, fontWeight: 200 }}><b>✓ Efficient Multi-Account Handling:</b><br /> Seamlessly manage bulk campaigns and posts, supporting agency-level scalability.</p>
                         <div style={{ alignItems: 'center', justifyContent: 'center', display: 'flex', margin: 20 }}>
                             <button className={button.button_accent_blue}>Explore now</button>
                         </div>
