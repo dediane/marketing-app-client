@@ -98,7 +98,7 @@ const PricingCard3 = () => {
                         <h3 style={{fontSize: 20, marginTop: 10, marginBottom: 10}}>Custom pricing</h3>
                     </div>
                     <p style={{padding: 14, fontSize: 16, fontWeight: 300}}>Tailored solutions for enterprises with specific needs.</p>
-                    <button className={buttons.button_accent} style={{backgroundColor: '#000000', color: '#ffffff'}}> Let's design your package!</button>
+                    <button className={buttons.button_accent} style={{backgroundColor: '#000000', color: '#ffffff'}}> Let`&apos;`s design your package!</button>
             </div>
         </div>
     )

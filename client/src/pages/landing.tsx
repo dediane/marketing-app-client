@@ -69,7 +69,7 @@ export const Background = () => {
 }
 
 export const Logos = () => {
-    const logos = [<IoLogoInstagram />, <IoLogoFacebook />, <IoLogoTiktok />, <IoLogoTwitter />, <IoLogoPinterest />]
+    const logos = [<IoLogoInstagram key="instagram" />, <IoLogoFacebook key="facebook" />, <IoLogoTiktok key="tiktok" />, <IoLogoTwitter key="twitter" />, <IoLogoPinterest key="pinterest" />]
     return (
         <div className={styles.logoDiv} >
             <div className={styles.carousel}>
@@ -98,19 +98,32 @@ export const Logos = () => {
 
 const StartFreeTrial = () => {
     const router = useRouter();
-    const items = ['Start your free trial', <IoRocketOutline />, 'Start your free trial', <IoRocketOutline />, 'Start your free trial', <IoRocketOutline />, 'Start your free trial', <IoRocketOutline />, 'Start your free trial', <IoRocketOutline />, 'Start your free trial', <IoRocketOutline />, 'Start your free trial', <IoRocketOutline />, 'Start your free trial', <IoRocketOutline />,]
+    const items = [
+        { text: 'Start your free trial', icon: <IoRocketOutline key='1'/> },
+        { text: 'Start your free trial', icon: <IoRocketOutline key='2'/> },
+        { text: 'Start your free trial', icon: <IoRocketOutline key='3'/> },
+        { text: 'Start your free trial', icon: <IoRocketOutline key='4'/> },
+        { text: 'Start your free trial', icon: <IoRocketOutline key='5'/> },
+        { text: 'Start your free trial', icon: <IoRocketOutline key='6'/> },
+        { text: 'Start your free trial', icon: <IoRocketOutline key='7'/> },
+        { text: 'Start your free trial', icon: <IoRocketOutline key='8'/> },
+        { text: 'Start your free trial', icon: <IoRocketOutline key='9'/> }]
+
     return (
         <div className={styles.logoDiv2} onClick={() => router.push('/register')}>
             <div className={styles.carousel}>
                 <div className={styles.carouselInner2}>
                     {items.map((item, idx) => (
-                        <div key={idx} className={styles.carouselItem2}>
-                            {item}
+                        <div key={idx} className={styles.carouselItem2} style={{display: 'flex'}}>
+                            {item.text}
+                            <div style={{paddingLeft: 50}}>{item.icon}</div>
                         </div>))}
+
                     {items.map((item, idx) => (
-                        <div key={idx} className={styles.carouselItem2}>
-                            {item}
-                        </div>))}
+                        <div key={idx} className={styles.carouselItem2} style={{display: 'flex'}}>
+                        {item.text}
+                        <div style={{paddingLeft: 50}}>{item.icon}</div>
+                    </div>))}
                 </div>
             </div>
         </div>
@@ -208,9 +221,9 @@ const WeareDesigned = () => {
                 <h2 className={Belgiano.className} style={{ fontSize: 46, marginBottom: '20px' }}>We are designed for</h2>
                 <div style={{ display: 'flex', flexDirection: 'row' }}>
                     <div style={{ padding: 30, marginLeft: 10, marginRight: 10, flex: 1 }}>
-                    <Image src="/assets/pic1.jpg" alt="illustration" width={300} height={160} style={{objectFit: 'cover', borderRadius: "20px", marginLeft: 'auto', marginRight: 'auto', marginBottom: '10px'}} />
+                        <Image src="/assets/pic1.jpg" alt="illustration" width={300} height={160} style={{ objectFit: 'cover', borderRadius: "20px", marginLeft: 'auto', marginRight: 'auto', marginBottom: '10px' }} />
                         <h2 style={{ fontWeight: 200, fontSize: 24, marginBottom: 20 }}>Business Owners Seeking Online Growth</h2>
-                        <p style={{ marginBottom: 20, fontWeight: 200 }}><b>✓ Optimize Social Media Presence:</b><br /> Elevate your brand's visibility across all leading platforms with our integrated tool.<br /></p>
+                        <p style={{ marginBottom: 20, fontWeight: 200 }}><b>✓ Optimize Social Media Presence:</b><br /> Elevate your brand`&apos;`s visibility across all leading platforms with our integrated tool.<br /></p>
                         <p style={{ marginBottom: 20, fontWeight: 200 }}><b>✓ Data-Driven Growth:</b><br /> Harness actionable insights to understand your audience, boosting organic business growth online.<br /></p>
                         <p style={{ marginBottom: 20, fontWeight: 200 }}><b>✓ Automated Content Scheduling:</b><br /> Plan weeks ahead, allowing more time for core business strategies.</p>
                         <div style={{ alignItems: 'center', justifyContent: 'center', display: 'flex', margin: 20 }}>
@@ -218,7 +231,7 @@ const WeareDesigned = () => {
                         </div>
                     </div>
                     <div style={{ padding: 30, marginLeft: 10, marginRight: 10, flex: 1 }}>
-                        <Image src="/assets/pic4.jpg" alt="illustration" width={300} height={160} style={{objectFit: 'cover', borderRadius: "20px", marginLeft: 'auto', marginRight: 'auto', marginBottom: '10px'}} />
+                        <Image src="/assets/pic4.jpg" alt="illustration" width={300} height={160} style={{ objectFit: 'cover', borderRadius: "20px", marginLeft: 'auto', marginRight: 'auto', marginBottom: '10px' }} />
                         <h2 style={{ fontWeight: 200, fontSize: 24, marginBottom: 20 }}> Freelancers Enhancing Digital Profiles</h2>
                         <p style={{ marginBottom: 20, fontWeight: 200 }}><b>✓ Unified Social Media Dashboard:</b><br />Effortlessly manage diverse accounts, catering to varied client needs.<br /></p>
                         <p style={{ marginBottom: 20, fontWeight: 200 }}><b>✓ Affordable essential Social Media Tools:</b><br /> Premium features tailored to the freelancer budget.<br /></p>
@@ -228,7 +241,7 @@ const WeareDesigned = () => {
                         </div>
                     </div>
                     <div style={{ padding: 30, marginLeft: 10, marginRight: 10, flex: 1 }}>
-                    <Image src="/assets/pic3.jpg" alt="illustration" width={300} height={160} style={{objectFit: 'cover', borderRadius: "20px", marginLeft: 'auto', marginRight: 'auto', marginBottom: '10px'}} />
+                        <Image src="/assets/pic3.jpg" alt="illustration" width={300} height={160} style={{ objectFit: 'cover', borderRadius: "20px", marginLeft: 'auto', marginRight: 'auto', marginBottom: '10px' }} />
                         <h2 style={{ fontWeight: 200, fontSize: 24, marginBottom: 20 }}>Digital Agencies & Social Media Managers</h2>
                         <p style={{ marginBottom: 20, fontWeight: 200 }}><b>✓ Team Collaboration Tools:</b><br /> Role-specific assignments, permissions management, and streamlined team efforts.<br /></p>
                         <p style={{ marginBottom: 20, fontWeight: 200 }}><b>✓ Comprehensive Social Media Reporting:</b><br /> Deliver clear ROI with detailed analytics and adaptable reports.<br /></p>
@@ -255,7 +268,7 @@ const HowItWorks = () => {
                             <p className={styles.number} style={{ color: '#C4F7A1', textShadow: '1px 1px 1px black' }}>1.</p>
                             <div style={{ display: 'flex', flexDirection: 'column', paddingLeft: 20 }}>
                                 <h3 style={{ fontWeight: 200, fontSize: 24, marginTop: 20, marginBottom: 20 }}>Compare & Choose Your Plan</h3>
-                                <p style={{ fontWeight: 300 }}>Explore our tailored plans. Whether you're a pro or a beginner, we've got the right package for you.</p>
+                                <p style={{ fontWeight: 300 }}>Explore our tailored plans. Whether you are a pro or a beginner, we have got the right package for you.</p>
                             </div>
                         </div>
                         <div style={{ display: 'flex', flexDirection: 'row', margin: 20 }}>
@@ -269,7 +282,7 @@ const HowItWorks = () => {
                             <p className={styles.number} style={{ color: '#ffb3d5', textShadow: '1px 1px 1px black' }}>3.</p>
                             <div style={{ display: 'flex', flexDirection: 'column', paddingLeft: 20 }}>
                                 <h3 style={{ fontWeight: 200, fontSize: 24, marginTop: 20, marginBottom: 20 }}>Onboarding & Link Your Socials</h3>
-                                <p style={{ fontWeight: 300 }}>With our simple onboarding, link your social media accounts in a few clicks and you're set.</p>
+                                <p style={{ fontWeight: 300 }}>With our simple onboarding, link your social media accounts in a few clicks and you are set.</p>
                             </div>
                         </div>
                     </div>

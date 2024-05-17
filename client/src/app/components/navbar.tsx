@@ -53,9 +53,9 @@ export default function Navbar() {
             <div className={styles.navContent}>
 
                 <div className={styles.logo}>
-                    <a href="/">
+                    <Link href="/">
                         <Image src="/assets/home.png" alt="logo" width={20} height={20} />
-                    </a>
+                    </Link>
                 </div>
                 {(showNav || !isMobile) && (
                 <>
@@ -111,7 +111,7 @@ export default function Navbar() {
                             <hr style={{marginBottom: '20px'}}/>
                             <div className={styles.megaMenubtn2} onClick={() => router.push('/')}>
                                 <h4 className={styles.subtitle}>One inbox for all your social medias</h4>
-                                <p>Don't miss any message, get them all in one place</p>
+                                <p>Don`&apos;`t miss any message, get them all in one place</p>
                             </div>
                             <div className={styles.megaMenubtn2} onClick={() => router.push('/')}>
                                 <h4 className={styles.subtitle}>AI powered assistant</h4>
