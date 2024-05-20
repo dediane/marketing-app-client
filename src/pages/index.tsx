@@ -11,13 +11,13 @@ import Landing from './landing';
 
 export default function Home() {
   const router = useRouter();
-  const isAuthenticated = useSelector((state :RootState) => state.user.isAuthenticated );
-  useEffect(() => {
-    if (isAuthenticated) {
-      // Redirect to another page if authenticated
-      router.push('/dashboard');
-    }
-}, [isAuthenticated]);
+  // const isAuthenticated = useSelector((state :RootState) => state.user.isAuthenticated );
+//   useEffect(() => {
+//     if (isAuthenticated) {
+//       // Redirect to another page if authenticated
+//       router.push('/dashboard');
+//     }
+// }, [isAuthenticated]);
   return (
     <main >
       <Landing />
