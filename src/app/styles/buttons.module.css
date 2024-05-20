@@ -1,0 +1,70 @@
+.button, .button_big {
+    background-color: var(--bg);
+    color: var(--black);
+    border: none;
+    padding: 12px;
+    font-weight: 500;
+    font-size: 16px;
+    box-shadow: 2px 2px 0px 0px #000000;
+    border: 1px solid var(--black);
+    margin: 6px;
+    cursor: pointer;
+  }
+  
+  .button_accent, .button_big_accent, .button_accent_pink, .button_accent_blue {
+    background-color: var(--green);
+    color: var(--black);
+    border: none;
+    padding: 12px;
+    font-weight: 500;
+    font-size: 16px;
+    box-shadow: 2px 2px 0px 0px #000000;
+    border: 1px solid var(--black);
+    margin: 6px;
+    cursor: pointer;
+  }
+  
+  .button_accent_pink {
+    background-color: var(--pink);
+  }
+  
+  .button_accent_blue {
+    background-color: var(--blue);
+  }
+  
+  
+  
+  .button_big {
+    padding: 18px 40px;
+    font-size: 18px;
+    box-shadow: 4px 4px 0px 0px #000000;
+  }
+  
+  .button_big_accent {
+    padding: 18px 40px;
+    font-size: 18px;
+    box-shadow: 4px 4px 0px 0px #000000;
+  }
+  
+  .button_big:hover{
+    background-color: var(--bg);
+    box-shadow: 0 0px #666;
+    transform: translateX(4px) translateY(4px);
+  }
+  
+  .button_big_accent:hover {
+    background-color: var(--green);
+    box-shadow: 0 0px var(--green);
+    transform: translateX(4px) translateY(4px);
+  }
+  
+  .button_accent:hover, .button_accent_pink:hover, .button_accent_blue:hover {
+    box-shadow: 0 0px var(--green);
+    transform: translateX(2px) translateY(2px);
+  }
+  
+  .button:hover{
+    background-color: var(--bg);
+    box-shadow: 0 0px #666;
+    transform: translateX(2px) translateY(2px);
+  }
