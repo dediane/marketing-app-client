@@ -1,5 +1,5 @@
 .container {
-  max-width: 1600px;
+  max-width: 1200px;
   margin: auto;
 }
 
@@ -13,9 +13,6 @@
     align-items: center;
 }
 
-.number {
-    font-size: 134px;
-}
 
 .card {
   margin-left: 120px;
@@ -122,4 +119,12 @@
     100% {
       transform: translateX(-50%); /* Move it by 50% to give the appearance of infinite scroll */
     }
+  }
+
+  @media screen and (max-width: 768px) {
+    .container {
+      width: 100vw;
+    }
+
+
   }
