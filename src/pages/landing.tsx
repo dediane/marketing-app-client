@@ -223,7 +223,7 @@ const WeareDesigned = () => {
                     <div style={{ padding: 30, marginLeft: 10, marginRight: 10, flex: 1 }}>
                         <Image src="/assets/pic1.jpg" alt="illustration" width={300} height={160} style={{ objectFit: 'cover', borderRadius: "20px", marginLeft: 'auto', marginRight: 'auto', marginBottom: '10px' }} />
                         <h2 style={{ fontWeight: 200, fontSize: 24, marginBottom: 20 }}>Business Owners Seeking Online Growth</h2>
-                        <p style={{ marginBottom: 20, fontWeight: 200 }}><b>✓ Optimize Social Media Presence:</b><br /> Elevate your brand`&apos;`s visibility across all leading platforms with our integrated tool.<br /></p>
+                        <p style={{ marginBottom: 20, fontWeight: 200 }}><b>✓ Optimize Social Media Presence:</b><br /> Elevate your brand&apos;s visibility across all leading platforms with our integrated tool.<br /></p>
                         <p style={{ marginBottom: 20, fontWeight: 200 }}><b>✓ Data-Driven Growth:</b><br /> Harness actionable insights to understand your audience, boosting organic business growth online.<br /></p>
                         <p style={{ marginBottom: 20, fontWeight: 200 }}><b>✓ Automated Content Scheduling:</b><br /> Plan weeks ahead, allowing more time for core business strategies.</p>
                         <div style={{ alignItems: 'center', justifyContent: 'center', display: 'flex', margin: 20 }}>
