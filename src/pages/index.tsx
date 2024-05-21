@@ -8,6 +8,7 @@ import { useRouter } from 'next/router';
 import { RootState } from '@/app/store/userSlice';
 import Authentication from '@/app/components/authentication';
 import Landing from './landing';
+import Head from 'next/head';
 
 export default function Home() {
   const router = useRouter();
@@ -19,8 +20,13 @@ export default function Home() {
 //     }
 // }, [isAuthenticated]);
   return (
-    <main >
-      <Landing />
-    </main>
+    <>
+    <Head>
+      <title>Marketing tools demo app</title>
+      <meta name="description" content="Home page" />
+      <link rel="icon" href="/favicon.ico" />
+    </Head>
+    <Landing />
+    </>
   )
 }
